@@ -1,6 +1,7 @@
-import pickle
+import os
 
-model = pickle.load(open("model.pkl", "rb"))
+model\_path = os.path.join(os.path.dirname(**file**), 'model.pkl')
+model = pickle.load(open(model_path,'rb'))
 vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
 
 def ai_check(text):
